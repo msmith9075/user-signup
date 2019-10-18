@@ -25,7 +25,7 @@ def index():
         for i in username:
             #if there is a blank space in username, it's invalid
             if i.isspace():
-                username_error = 'Username cannot contain spaces.'
+                username_error = 'Username can't contain spaces.'
                 username = ''
             else:
                 #if username has fewer than 3 or greater than 20 characters, it's invalid
@@ -39,12 +39,12 @@ def index():
 
         for i in password:
             if i.isspace():
-                password_error = 'Password must not contain spaces.'
+                password_error = 'Password can't contain spaces.'
             else:
                 if (len(password) < 3) or (len(password) > 20):
                     password_error = 'Password must be 3-20 characters and not contain spaces.'
         if not len(password):
-            password_error = 'Not a valid password'
+            password_error = 'Please enter a valid password'
 
         if password != verify_password:
             verify_password_error = 'Passwords do not match.'
